@@ -1,7 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>deployment</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+    </servers>
+</settings>
+
 
     <groupId>com.example</groupId>
     <artifactId>java-tomcat-maven-example</artifactId>
@@ -59,13 +67,7 @@
   </snapshotRepository>
 </distributionManagement>
 
-<servers>
-    <server>
-        <id>deployment</id>
-        <username>admin</username>
-        <password>admin</password>
-    </server>
-</servers>
+
 
          
 </project>
