@@ -1,74 +1,23 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <servers>
-        <server>
-            <id>deployment</id>
-            <username>admin</username>
-            <password>admin</password>
-        </server>
-    </servers>
-</settings>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-
+    <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
     <artifactId>java-tomcat-maven-example</artifactId>
-    <packaging>war</packaging>
     <version>1.0</version>
-    <name>hello Maven Webapp</name>
-    <url>http://maven.apache.org</url>
+    <packaging>war</packaging>
 
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-         
+    <name>Java Tomcat Maven Example</name>
+    <description>A simple Java project using Tomcat and Maven</description>
+
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
+        <!-- Add your dependencies here -->
     </dependencies>
 
     <build>
-        <finalName>java-tomcat-maven-example</finalName>
-
         <plugins>
-            <!-- Tomcat 7 Maven Plugin -->
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <port>8080</port>
-                    <path>/</path>
-                </configuration>
-            </plugin>
-
-            <!-- Maven WAR Plugin for WAR packaging -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-            </plugin>
+            <!-- Add your plugins here -->
         </plugins>
     </build>
-         
-<distributionManagement>
-  <repository>
-    <id>maven-releases</id>
-    <url>http://54.91.8.86:8081/repository/maven-releases/</url>
-  </repository>
-  <snapshotRepository>
-    <id>maven-snapshots</id>
-    <url>http://54.91.8.86:8081/repository/maven-snapshots/</url>
-  </snapshotRepository>
-</distributionManagement>
-
-
-
-         
 </project>
-
